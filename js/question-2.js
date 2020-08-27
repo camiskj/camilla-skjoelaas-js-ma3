@@ -15,15 +15,15 @@ You can use either regular promise or async/await syntax to make the call.
 
 Be sure to arrange all file types appropriately, consult the repos from the lessons for examples. */
 
-const url = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating";
+const urlGames = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating";
 
-const resultsContainer = document.querySelector(".results");
+const resultsContainer = document.querySelector(".resultsContainer");
 
 async function getGames() {
 
     try {
 
-    const response = await fetch(url);
+    const response = await fetch(urlGames);
 
     const result = await response.json();
 
@@ -40,7 +40,7 @@ async function getGames() {
             break;
         }
 
-        resultsContainer.innerHTML += `<div class="result">
+        resultsContainer.innerHTML += `<div class="gameList">
         <h2>${facts[i].name}</h2>
         <p>Rating: ${facts[i].rating}</p>
         <p>Number of tags: ${facts[i].tags.length}</p></div>`
@@ -48,8 +48,8 @@ async function getGames() {
     }
 
     catch(error) {
-        console.log("An error occured");
-        resultsContainer.innerHTML = "An error occured";
+        console.log("Error");
+        resultsContainer.innerHTML = "We're sorry, but something went wrong.";
     }
 }
 

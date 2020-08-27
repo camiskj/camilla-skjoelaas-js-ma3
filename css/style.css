@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     background: #ccc;
     font-family: "Arial", sans-serif;
@@ -16,19 +12,19 @@ h2 {
     font-size: 16px;
 }
 
-.results {
+.resultsContainer {
     display: flex;
     flex-wrap: wrap;
 }
 
-.result {
+.gameList {
     margin: 5px;
     padding: 10px;
     width: 200px;
     background: #fff;
-    border: 1px solid #808080;
-    border-radius: 5px;
 }
+
+/* I found the code for the loader below in lesson 3.1 */
 
 .loading {
     border: 16px solid #fff;
