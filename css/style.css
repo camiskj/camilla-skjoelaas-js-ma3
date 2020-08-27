@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ccc;
+    font-family: "Arial", sans-serif;
+}
+
+h1 {
+    margin-left: 5px;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.result {
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.loading {
+    border: 16px solid #fff;
+    border-top: 16px solid #808080;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
